@@ -4,6 +4,6 @@
   tasks:
     - name: create directory test-ansible
       file:
-        path: /tmp/folder1/test-ansible
+        path: /tmp/test-ansible
         state: directory
   
