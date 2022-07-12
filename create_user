@@ -14,7 +14,7 @@
           path: /tmp/folder1/test
           owner: tanya
           group: wheel
-          state: touch    
+          state: touch
 
           
 
