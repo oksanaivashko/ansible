@@ -1,0 +1,21 @@
+---
+  - name: creat user
+    hosts: localhost
+    tasks:
+      - name: create user
+        user:
+          name: tanya
+          comment: hero
+          uid: 1010
+          group: wheel
+          state: present
+      - name: create file
+        file:
+          path: /tmp/folder1/test
+          owner: tanya
+          group: wheel
+          state: touch    
+
+          
+
+
