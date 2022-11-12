@@ -1,0 +1,6 @@
+---
+- name: Play name
+  hosts: localhost
+  tasks: 
+    - name: Run free command
+      command: "free -m"

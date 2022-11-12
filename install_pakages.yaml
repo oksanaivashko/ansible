@@ -1,0 +1,24 @@
+---
+- name: Install Packages
+  hosts: all
+  gather_facts: yes
+  tasks:
+    - name: Install epel-release on CentOS distribution
+      when: ansible_distribution == "CentOS"
+      yum: 
+        name:
+          - epel-release
+      register: task_result
+
+
+    - name: Install vim, curl, wget
+      when: 
+      - ansible_distribution == "CentOS"
+      - task_result is succeeded
+      yum: 
+        name:
+          - vim
+          - curl
+          - wget
+        state: present
+      

@@ -1,0 +1,15 @@
+---
+- name: MY first play
+  hosts: localhost
+  tasks: 
+    - name: Task1
+      command: "ls -l /tmp"
+    - name: Task2
+      command: "ls -l /etc"
+    - name: Create file
+      file:
+        path: /tmp/testfile
+        state: touch
+        owner: amy
+        group: amy
+        mode: u+x,g+wx,o+x
